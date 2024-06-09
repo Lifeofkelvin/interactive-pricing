@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --Soft-Cyan: hsl(174, 77%, 80%);
+    --Strong-Cyan: hsl(174, 86%, 45%);
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    --Light-Red: hsl(15, 100%, 70%);
+    --Pale-Blue: hsl(226, 100%, 87%);
+    --White: hsl (0, 0%, 100%);
+    --Very-Pale-Blue: hsl(230, 100%, 99%);
+    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue: hsl(223, 50%, 87%);
+    --Grayish-Blue: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(/images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top top;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+}
+
+.container .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+    background-image: url(/images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center center;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+h1 {
+    color: var(--Dark-Desaturated-Blue);
+    font-size: 25px;
+}
+
+.head-text {
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.content {
+    background-color: var(--Very-Pale-Blue);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+.views {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pageviews {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pageviews span {
+    margin-right: 5px;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price span{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+.price .month {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+}
+
+.progress .progress-bar {
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+.progress-bar input[type="range"] {
+    width: 400px;
+}
+
+.myrange {
+    appearance: none;
+    background-color: var(--Soft-Cyan);
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.myrange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    background-image: url(/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: var(--Strong-Cyan);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.myrange::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 15px var(--Strong-Cyan);
+}
+
+.monthly {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--Grayish-Blue);
+    text-align: right;
+    width: 100%;
+    margin: 10px;
+}
+
+.discount {
+    background-color: var(--Light-Grayish-Red);
+    color: var(--Light-Red);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.switch {
+    position: relative;
+    height: 20px;
+    width: 40px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: var(--Soft-Cyan);
+    cursor: pointer;
+}
+
+.switch input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.switch .slider {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: all 0.5s;
+}
+
+.switch input:checked + .slider {
+    transform: translateX(19px);
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.start ul {
+    list-style: url(/images/icon-check.svg);
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+}
+
+.start ul li {
+    margin-top: 5px;
+}
+
+.start button {
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--Dark-Desaturated-Blue);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+    .container .header {
+        width: 375px;
+        text-align: center;
+        height: 100px;
+        justify-content: center;
+        gap: 10px;
+        background-size: 30%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+
+    .head-text {
+        font-size: 10px;
+        width: 60%;
+    }
+
+
+    .content {
+        width: 300px;
+    }
+
+    .views {
+        flex-direction: column;
+    }
+
+    .progress-bar input[type="range"] {
+        width: 280px;
+    }
+
+    .monthly {
+        width: 280px;
+        gap: ;
+    }
+
+    .monthly span {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .start {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .start ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
